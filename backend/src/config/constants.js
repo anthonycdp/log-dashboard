@@ -1,0 +1,74 @@
+/**
+ * Application constants
+ * Centralized configuration to avoid magic numbers throughout the codebase
+ */
+
+const TIME = {
+  ONE_MINUTE_MS: 60000,
+  ONE_HOUR_MS: 3600000,
+  FIVE_MINUTES_MS: 300000,
+  TEN_MINUTES_MS: 600000
+};
+
+const LIMITS = {
+  MAX_LOGS: 100000,
+  MAX_ALERTS: 10000,
+  PRUNE_PERCENTAGE: 0.1,
+  JSON_BODY_LIMIT: '10mb'
+};
+
+const ANOMALY = {
+  ERROR_RATE_THRESHOLD: 0.3,
+  ERROR_RATE_MIN_SAMPLE: 10,
+  FREQUENCY_THRESHOLD: 3,
+  PATTERN_MIN_OCCURRENCES: 5,
+  CONTAMINATION_RATE: 0.1,
+  ML_SCORE_THRESHOLD: 0.7,
+  PATTERN_SCORE_THRESHOLD: 0.5,
+  BASELINE_MIN_SAMPLES: 10,
+  BASELINE_MAX_SAMPLES: 100
+};
+
+const LEVEL_SCORES = {
+  error: 1,
+  warn: 0.7,
+  info: 0.3,
+  debug: 0
+};
+
+const FEATURE_WEIGHTS = {
+  logLevel: 0.3,
+  frequency: 0.25,
+  timePattern: 0.2,
+  messageEntropy: 0.25
+};
+
+const TIME_PATTERN = {
+  UNUSUAL_HOURS_SCORE: 0.8,
+  NORMAL_HOURS_SCORE: 0.2,
+  UNUSUAL_HOUR_START: 22,
+  UNUSUAL_HOUR_END: 6
+};
+
+const PAGINATION = {
+  DEFAULT_LIMIT: 100,
+  DEFAULT_ALERTS_LIMIT: 50,
+  DEFAULT_OFFSET: 0
+};
+
+const SEVERITY_RATIOS = {
+  CRITICAL_MULTIPLIER: 2,
+  HIGH_MULTIPLIER: 1.5,
+  MEDIUM_MULTIPLIER: 1.2
+};
+
+module.exports = {
+  TIME,
+  LIMITS,
+  ANOMALY,
+  LEVEL_SCORES,
+  FEATURE_WEIGHTS,
+  TIME_PATTERN,
+  PAGINATION,
+  SEVERITY_RATIOS
+};
